@@ -5,7 +5,10 @@ class CocoapodsAT1143 < Formula
     sha256 "de05766e5771e0cef7af89f73b0e42a1f1c52a76ce1288592cd9511bcd688a9e"
     license "MIT" 
   
-    depends_on "ruby"
+    depends_on "pkg-config" => :build
+      depends_on "libyaml"
+      depends_on "openssl@3"
+      depends_on "ruby"
   
     def install
       system "gem", "build", "cocoapods.gemspec"
