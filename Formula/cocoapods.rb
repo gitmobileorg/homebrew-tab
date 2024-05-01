@@ -15,5 +15,6 @@ class Cocoapods < Formula
     system "gem", "install", "cocoapods-1.14.3.gem"
     # Other executables don't work currently.
     bin.install libexec/"bin/pod", libexec/"bin/xcodeproj"
+    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
   end
 end
