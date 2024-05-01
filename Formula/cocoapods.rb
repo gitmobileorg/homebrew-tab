@@ -10,6 +10,7 @@ class Cocoapods < Formula
   uses_from_macos "libffi", since: :catalina
   
   def install
+    ENV["GEM_HOME"] = libexec
     system "gem", "build", "cocoapods.gemspec"
     system "gem", "install", "cocoapods-1.14.3.gem"
     # Other executables don't work currently.
