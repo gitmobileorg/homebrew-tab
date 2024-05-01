@@ -1,4 +1,4 @@
-class CocoapodsAT1143 < Formula
+class Cocoapods < Formula
   desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
   url "https://github.com/CocoaPods/CocoaPods/archive/refs/tags/1.14.3.tar.gz"
